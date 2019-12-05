@@ -1,0 +1,27 @@
+<TextureAtlas imagePath="whatever">
+<SubTexture name="1" x="0" y="0" width="55" height="55"/>
+<SubTexture name="2" x="55" y="0" width="55" height="55"/>
+<SubTexture name="3" x="110" y="0" width="55" height="55"/>
+<SubTexture name="4" x="165" y="0" width="55" height="55"/>
+<SubTexture name="5" x="220" y="0" width="55" height="55"/>
+<SubTexture name="6" x="275" y="0" width="55" height="55"/>
+<SubTexture name="7" x="0" y="55" width="55" height="55"/>
+<SubTexture name="8" x="55" y="55" width="55" height="55"/>
+<SubTexture name="9" x="110" y="55" width="55" height="55"/>
+<SubTexture name="10" x="165" y="55" width="55" height="55"/>
+<SubTexture name="particle_11" x="0" y="110" width="55" height="55"/>
+<SubTexture name="particle_12" x="55" y="110" width="55" height="55"/>
+<SubTexture name="particle_21" x="110" y="110" width="55" height="55"/>
+<SubTexture name="particle_22" x="165" y="110" width="55" height="55"/>
+<SubTexture name="particle_31" x="220" y="110" width="55" height="55"/>
+<SubTexture name="particle_32" x="275" y="110" width="55" height="55"/>
+<SubTexture name="particle_41" x="0" y="165" width="55" height="55"/>
+<SubTexture name="particle_42" x="55" y="165" width="55" height="55"/>
+<SubTexture name="particle_51" x="110" y="165" width="55" height="55"/>
+<SubTexture name="particle_52" x="165" y="165" width="55" height="55"/>
+<SubTexture name="particle_61" x="220" y="165" width="55" height="55"/>
+<SubTexture name="particle_62" x="275" y="165" width="55" height="55"/>
+<SubTexture name="hint_arrow" x="0" y="220" width="55" height="55"/>
+<SubTexture name="glow" x="55" y="220" width="110" height="110"/>
+
+</TextureAtlas>
