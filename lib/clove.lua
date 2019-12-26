@@ -5,7 +5,7 @@
 ]]
 
 local clove={debug=false}
-local delim=package.config:sub(1,1) --path delimiter: '/' or '\'
+local delim='/'
 
 local imgExt={"png","jpg","gif","jpeg","tga","bmp"}
 local fontExt={"ttf","otf"}
