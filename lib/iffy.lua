@@ -159,12 +159,11 @@ function iffy.newAtlas(name,url,metafile,sw,sh)
 	
 	sw,sh=sw or iffy.images[name]:getWidth(),sh or iffy.images[name]:getHeight()
 
-	local infile=io.open(metafile,'r')
 	local i,sname,x,y,width,height=1
 
 	if getExtension(metafile)=="xml" then
 		--READ XML FILE ('i' means the line number)
-		for line in infile:lines() do
+		for line in love.filesystem.lines(metafile) do
 			if i>1 and line:match('%a') and not line:match('<!') and line~="</TextureAtlas>" then
 				_, sname = string.match(line, "name=([\"'])(.-)%1")
 
@@ -182,7 +181,7 @@ function iffy.newAtlas(name,url,metafile,sw,sh)
 		end
 	else
 		--READ CSV FILE ('i' means record number)
-		for line in infile:lines() do
+		for line in love.filesystem.lines(metafile) do
 			i=1
 			for data in line:gmatch("[^,]+") do
 				if i>5 then break end
@@ -281,9 +280,8 @@ function iffy.newTilemap(name,url)
 		name=removeExtension(url)
 	end
 	if type(url)=='string' then
-		local infile=io.open(url,'r')
 		assert(fileExists(url),"Iffy Error! The provided file '"..url.."' doesn't exist")
-		for line in infile:lines() do
+		for line in love.filesystem.lines(url) do
 			local row={}
 			i=1
 			for tile_no in line:gmatch("[^,]+") do
@@ -462,4 +460,3 @@ iffy.newTileSet     = iffy.newTileset
 
 
 return iffy
-
