@@ -1,14 +1,14 @@
 MainMenuState=State()
 
 function MainMenuState:init()
-	self.y=100
+	self.y=100 self.r=100
 	self.rectOp=0
 	self.scale=.3
 	self.playBtn=lavis.imageButton(gImages.playBtn,330,100)
 	self.playBtn:setShape('circle',130)
 	self.playBtn:setImageOrigin(95,95)
-	self.playBtn:setPosition(398,470)
-	self.playBtn:setImagePosition(385,440)
+	self.playBtn:setPosition(388,470)
+	self.playBtn:setImagePosition(375,440)
 	self.playBtn.onClick=function()
 		self.playBtn:setImageSize(2*100)
 	end
@@ -45,7 +45,6 @@ function MainMenuState:tween()
 			scale=self.scale==.3 and .25 or .3
 		})
 	end)
-	self.r=100
 end
 
 function MainMenuState:update(dt)

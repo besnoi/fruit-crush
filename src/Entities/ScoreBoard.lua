@@ -121,7 +121,7 @@ function ScoreBoard:renderText()
 end
 
 function ScoreBoard:render()
-	if euler.pointInRect(self.x,self.y-130,gImages.hintWindow:getWidth(),gImages.hintWindow:getHeight(),love.mouse.getPosition()) then
+	if not self.disabled and euler.pointInRect(self.x,self.y-130,gImages.hintWindow:getWidth(),gImages.hintWindow:getHeight(),love.mouse.getPosition()) then
 		love.graphics.setColor(.8,.8,.8)
 	end
 	love.graphics.draw(gImages.hintWindow,self.x,self.y-130)

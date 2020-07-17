@@ -129,10 +129,11 @@ function PlayState:lose()
 	flux.tween(board,2,{
 		op=0
 	}):oncomplete(function()
-		gStateMachine:switch('roundOver',{
-			level=self.scoreBoard.level,
-			target=self.scoreBoard.targetScore,
-			time=self.scoreBoard.initialScore
+		gStateMachine:switch('lose',{
+			board=self.board,
+			scoreBoard=self.scoreBoard,
+			psystem=self.psystem,
+			guiSystem=self.guiSystem
 		})
 	end)
 end

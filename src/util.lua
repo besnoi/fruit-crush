@@ -39,6 +39,7 @@ gStateMachine=StateMachine{
 	['mainMenu']=function() return MainMenuState() end,
 	['pause']=function() return PauseState() end,
 	['roundOver']=function() return RoundOverState() end,
+	['lose']=function() return LoseState() end,
 	['play']=function() return PlayState() end
 }
 
